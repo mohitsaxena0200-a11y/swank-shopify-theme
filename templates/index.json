@@ -1,51 +1,30 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+    "swank_hero": {
+      "type": "custom-liquid",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "custom_liquid": "{% assign hero_product = collections['all'].products.first %}\n<section class=\"swank-editorial-hero\">\n  {% if hero_product.featured_image %}<div class=\"swank-editorial-hero__image\">{{ hero_product.featured_image | image_url: width: 2400 | image_tag: loading: 'eager', widths: '750, 1100, 1500, 2000, 2400', sizes: '100vw', alt: 'SWANK fashion collection' }}</div>{% endif %}\n  <div class=\"swank-editorial-hero__shade\"></div>\n  <div class=\"swank-editorial-hero__content\"><p class=\"swank-eyebrow\">THE NEW SEASON · SWANK</p><h1>STYLE THAT<br><span>STAYS ICONIC.</span></h1><p class=\"swank-editorial-hero__copy\">Elevated everyday fashion. Made to make an impression.</p><a class=\"swank-luxury-button\" href=\"{{ routes.all_products_collection_url }}\">EXPLORE COLLECTION <span aria-hidden=\"true\">→</span></a></div>\n  <div class=\"swank-hero-index\">01 <span></span> COLLECTION</div>\n</section>\n<div class=\"swank-intro-strip\"><span>REFINED STYLE</span><i></i><span>EVERYDAY CONFIDENCE</span><i></i><span>THE SWANK EDIT</span></div>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
+        "title": "THE SWANK EDIT",
+        "heading_size": "h1",
+        "description": "<p>Discover standout styles selected for your everyday wardrobe.</p>",
+        "show_description": true,
         "description_style": "body",
         "collection": "all",
         "products_to_show": 8,
@@ -55,21 +34,27 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "swank_brand_note": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"swank-brand-note\"><p class=\"swank-eyebrow\">MORE THAN A LOOK</p><h2>MAKE EVERY<br><span>MOMENT YOURS.</span></h2><p>Confidence is always in style. Find the pieces that feel unmistakably you.</p><a href=\"{{ routes.all_products_collection_url }}\">SHOP THE COLLECTION&nbsp; →</a></section>",
+        "color_scheme": "scheme-4",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
-  "order": [
-    "image_banner",
-    "featured_collection"
-  ]
+  "order": ["swank_hero", "featured_collection", "swank_brand_note"]
 }

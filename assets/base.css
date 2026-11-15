@@ -3667,3 +3667,38 @@ body { background: var(--swank-ivory); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* SWANK editorial luxury homepage */
+.swank-editorial-hero { position: relative; min-height: min(760px, 78vw); min-height: clamp(540px, 72vw, 790px); overflow: hidden; display: flex; align-items: center; background: #111; color: #fff; isolation: isolate; }
+.swank-editorial-hero__image, .swank-editorial-hero__shade { position: absolute; inset: 0; z-index: -1; }
+.swank-editorial-hero__image img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: .72; }
+.swank-editorial-hero__shade { background: linear-gradient(90deg, rgba(8,8,8,.88) 0%, rgba(8,8,8,.58) 42%, rgba(8,8,8,.08) 100%), linear-gradient(0deg, rgba(8,8,8,.28), transparent 45%); }
+.swank-editorial-hero__content { width: min(1240px, 100%); margin: 0 auto; padding: 90px 7%; }
+.swank-eyebrow { color: var(--swank-gold); font-size: 1.05rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; margin: 0 0 24px; }
+.swank-editorial-hero h1, .swank-brand-note h2 { color: #fff; font-size: clamp(4.2rem, 8.4vw, 10rem); line-height: .91; letter-spacing: -.065em; font-weight: 700; margin: 0; text-transform: uppercase; }
+.swank-editorial-hero h1 span, .swank-brand-note h2 span { color: var(--swank-gold); }
+.swank-editorial-hero__copy { max-width: 440px; color: rgba(255,255,255,.88); font-size: clamp(1.4rem, 1.5vw, 1.8rem); line-height: 1.6; margin: 28px 0 34px; }
+.swank-luxury-button { display: inline-flex; align-items: center; gap: 26px; padding: 18px 26px; background: var(--swank-gold); color: #111; text-decoration: none; font-size: 1.1rem; font-weight: 700; letter-spacing: .1em; border: 1px solid var(--swank-gold); transition: background .2s ease, color .2s ease; }
+.swank-luxury-button:hover { background: transparent; color: #fff; }
+.swank-hero-index { position: absolute; right: 6%; bottom: 34px; color: #fff; font-size: 1rem; letter-spacing: .18em; display: flex; align-items: center; gap: 12px; }
+.swank-hero-index span, .swank-intro-strip i { display: inline-block; width: 42px; height: 1px; background: var(--swank-gold); }
+.swank-intro-strip { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 26px; padding: 23px 18px; background: #111; color: #eee; border-top: 1px solid rgba(198,161,91,.45); border-bottom: 1px solid rgba(198,161,91,.45); font-size: .95rem; letter-spacing: .18em; }
+.swank-brand-note { background: #111; color: #fff; text-align: center; padding: 100px 24px 110px; border-top: 1px solid rgba(198,161,91,.45); }
+.swank-brand-note h2 { font-size: clamp(3.8rem, 7vw, 7.5rem); }
+.swank-brand-note > p:not(.swank-eyebrow) { color: #d5d2cb; max-width: 540px; margin: 24px auto 30px; font-size: 1.5rem; line-height: 1.6; }
+.swank-brand-note a { display: inline-block; color: var(--swank-gold); text-decoration: none; border-bottom: 1px solid var(--swank-gold); padding-bottom: 8px; letter-spacing: .13em; font-weight: 700; }
+.featured-collection .title { letter-spacing: -.04em; text-transform: uppercase; }
+.featured-collection .title-wrapper-with-link { align-items: end; }
+@media screen and (max-width: 749px) {
+ .swank-editorial-hero { min-height: 650px; align-items: end; }
+ .swank-editorial-hero__image img { object-position: 62% center; opacity: .62; }
+ .swank-editorial-hero__shade { background: linear-gradient(0deg, rgba(8,8,8,.94), rgba(8,8,8,.2) 88%); }
+ .swank-editorial-hero__content { padding: 80px 24px 100px; }
+ .swank-editorial-hero h1 { font-size: clamp(4.4rem, 17vw, 6.8rem); }
+ .swank-eyebrow { font-size: .9rem; letter-spacing: .17em; }
+ .swank-hero-index { right: 24px; bottom: 22px; }
+ .swank-intro-strip { gap: 12px; font-size: .78rem; letter-spacing: .1em; padding: 18px 10px; }
+ .swank-intro-strip i { width: 18px; }
+ .swank-brand-note { padding: 72px 20px 78px; }
+ .swank-brand-note h2 { font-size: clamp(3.8rem, 15vw, 5.8rem); }
+}
