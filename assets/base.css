@@ -3635,3 +3635,35 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* SWANK — Black & Gold luxury system */
+:root {
+  --swank-gold: #c6a15b;
+  --swank-black: #111111;
+  --swank-ivory: #f7f6f2;
+}
+body { background: var(--swank-ivory); }
+.header-wrapper, .footer, .announcement-bar-section { background: var(--swank-black); color: #fff; }
+.header-wrapper { border-bottom: 1px solid rgba(198,161,91,.55); }
+.header__menu-item, .header__icon, .header__heading-link { color: #fff !important; }
+.header__menu-item:hover, .header__active-menu-item { color: var(--swank-gold) !important; }
+.footer { border-top: 1px solid rgba(198,161,91,.55); }
+.footer a, .footer .link { color: #f7f6f2; }
+.button, .shopify-challenge__button { border-radius: 0 !important; letter-spacing: .08em; text-transform: uppercase; font-size: 1.15rem; }
+.button:not(.button--secondary) { background: var(--swank-gold); color: var(--swank-black); border-color: var(--swank-gold); }
+.button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--swank-gold); outline-offset: 3px; }
+.card__heading, .product__title, .collection-hero__title { letter-spacing: -.025em; }
+.card__inner, .card__media, .product__media, .media { border-radius: 0 !important; }
+.price { color: var(--swank-black); font-weight: 600; }
+.product-grid .card__information { padding-top: 1.4rem; }
+.section-header, .collection-hero { border-bottom: 1px solid rgba(198,161,91,.45); }
+.image-banner__box { background: rgba(17,17,17,.88); border: 1px solid var(--swank-gold); color: #fff; }
+.image-banner__heading { letter-spacing: -.035em; text-transform: uppercase; }
+@media screen and (max-width: 749px) {
+  .header-wrapper { border-bottom-width: 1px; }
+  .section-template--index-padding { padding-top: 3rem; }
+  .product-grid .card__information { padding-top: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
