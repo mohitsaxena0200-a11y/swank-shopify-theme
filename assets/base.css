@@ -3702,3 +3702,51 @@ body { background: var(--swank-ivory); }
  .swank-brand-note { padding: 72px 20px 78px; }
  .swank-brand-note h2 { font-size: clamp(3.8rem, 15vw, 5.8rem); }
 }
+
+/* SWANK product detail — luxury shopping experience */
+.product__info-container { max-width: 560px; }
+.product__text.caption-with-letter-spacing { color: #a17b3e; font-weight: 700; letter-spacing: .2em; font-size: 1rem; }
+.product__title { margin-top: .8rem; margin-bottom: 1.8rem; }
+.product__title h1 { font-size: clamp(3.2rem, 4.2vw, 5.4rem); line-height: 1.02; letter-spacing: -.055em; font-weight: 600; }
+.product .price { display: flex; align-items: center; gap: 12px; font-size: 2rem; }
+.product .price__sale .price-item--sale { color: #a17b3e; font-weight: 700; }
+.product .price__sale .price-item--regular { color: #777; font-size: 1.55rem; }
+.product .price__badge-sale { background: #c6a15b !important; color: #111 !important; border: 0 !important; border-radius: 0 !important; font-size: 1rem; letter-spacing: .1em; text-transform: uppercase; padding: .55rem 1rem; }
+.product-form__input .form__label { color: #6c665d; font-size: 1.35rem; letter-spacing: .08em; }
+.product-form__input input[type=radio] + label { min-width: 66px; min-height: 48px; padding: 1.1rem 1.8rem; border: 1px solid #b8b1a6; border-radius: 0 !important; background: transparent; color: #171717; font-weight: 500; transition: .2s ease; }
+.product-form__input input[type=radio]:checked + label { background: #111 !important; color: #c6a15b !important; border-color: #c6a15b !important; box-shadow: inset 0 0 0 1px #c6a15b; }
+.product-form__input input[type=radio] + label:hover { border-color: #c6a15b; box-shadow: 0 0 0 1px #c6a15b; }
+.product-form__input input[type=radio]:focus-visible + label { outline: 2px solid #c6a15b; outline-offset: 3px; }
+.product-form__quantity .quantity { min-height: 52px; border: 1px solid #b8b1a6; border-radius: 0 !important; }
+.quantity__button, .quantity__input { color: #171717; }
+.product-form__submit { min-height: 58px; background: #c6a15b !important; color: #111 !important; border: 1px solid #c6a15b !important; border-radius: 0 !important; font-weight: 700; letter-spacing: .14em; }
+.product-form__submit:hover { background: #111 !important; color: #c6a15b !important; }
+.shopify-payment-button__button { border-radius: 0 !important; }
+.product__media-list .product__media-item .global-media-settings { border: 1px solid rgba(198,161,91,.18); background: #f1efe9; }
+.product__media img { mix-blend-mode: multiply; }
+.product__accordion .accordion__title { letter-spacing: .05em; }
+.related-products .title { letter-spacing: -.035em; }
+@media screen and (max-width: 749px) {
+ .product__title h1 { font-size: 3.4rem; }
+ .product__info-container { padding: 0 1.5rem; }
+ .product .price { font-size: 1.8rem; }
+ .product-form__input input[type=radio] + label { min-width: 54px; padding: .9rem 1.35rem; }
+}
+
+/* SWANK size chart */
+.swank-size-guide { margin: 1.4rem 0 2.2rem; border-top: 1px solid rgba(198,161,91,.55); border-bottom: 1px solid rgba(198,161,91,.55); }
+.swank-size-guide > summary { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; cursor: pointer; list-style: none; color: #8c6a34; font-size: 1.15rem; font-weight: 700; letter-spacing: .16em; }
+.swank-size-guide > summary::-webkit-details-marker { display: none; }
+.swank-size-guide > summary span { font-size: 1.7rem; }
+.swank-size-guide[open] > summary span { transform: rotate(45deg); }
+.swank-size-guide__panel { padding: 1.2rem 0 2rem; }
+.swank-size-guide__eyebrow { color: #a17b3e; font-size: .95rem; letter-spacing: .2em; font-weight: 700; margin: 0 0 .8rem; }
+.swank-size-guide__panel h2 { color: #171717; font-size: 2.5rem; letter-spacing: -.04em; margin: 0 0 1rem; }
+.swank-size-guide__note { color: #68645e; font-size: 1.15rem; line-height: 1.5; }
+.swank-size-guide__table-wrap { overflow-x: auto; margin: 1.6rem 0; }
+.swank-size-guide table { width: 100%; border-collapse: collapse; text-align: center; font-size: 1.2rem; }
+.swank-size-guide th, .swank-size-guide td { padding: 1.2rem .8rem; border-bottom: 1px solid #ded9cf; }
+.swank-size-guide thead th { background: #171717; color: #c6a15b; font-size: 1rem; letter-spacing: .1em; }
+.swank-size-guide tbody th { color: #171717; font-weight: 700; }
+.swank-size-guide td { color: #272727; line-height: 1.5; }
+.swank-size-guide td small { color: #777; font-size: 1rem; }
